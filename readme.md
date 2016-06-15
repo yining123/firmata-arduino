@@ -1,70 +1,32 @@
-#Firmata
+# _冷衫之眼_说明
 
-[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/firmata/arduino?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+冷衫之眼 协议是电脑（智能手机/平板电脑）和微控制器进行通信的协议, 可以直接在电脑上控制IO, 通过在串口发送两个字节的数据,让IO口或者I2C等IO端口高低电平变化. 
 
-Firmata is a protocol for communicating with microcontrollers from software on a host computer. The [protocol](https://github.com/firmata/protocol) can be implemented in firmware on any microcontroller architecture as well as software on any host computer software package. The Arduino repository described here is a Firmata library for Arduino and Arduino-compatible devices. If you would like to contribute to Firmata, please see the [Contributing](#contributing) section below.
 
-##Usage
+## 两种使用方式
 
-There are two main models of usage of Firmata. In one model, the author of the Arduino sketch uses the various methods provided by the Firmata library to selectively send and receive data between the Arduino device and the software running on the host computer. For example, a user can send analog data to the host using ``` Firmata.sendAnalog(analogPin, analogRead(analogPin)) ``` or send data packed in a string using ``` Firmata.sendString(stringToSend) ```. See File -> Examples -> Firmata -> AnalogFirmata & EchoString respectively for examples.
+  ##　一种是把 冷衫之眼 运行在Arduino设备上, 
+  
+  * 数字量使用  ``` Firmata.sendAnalog(analogPin, analogRead(analogPin)) ``` 
+  * 发送字符串  ``` Firmata.sendString(stringToSend) ```. 
+  * 在Arduino中: See File -> Examples -> Firmata -> AnalogFirmata 或者 EchoString dier
+  
+  ## 第二种是 在 Arduino上的协议实现,然后实现和计算机的通信. 
+  
+   * StandardFirmata 标准实现
+   * StandardFirmataPlus
+   * StandardFirmataEthernet (以太网)
+   * 
+
+## 聊天地点
+ [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/firmata/arduino?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 
 The second and more common model is to load a general purpose sketch called StandardFirmata (or one of the variants such as StandardFirmataPlus or StandardFirmataEthernet depending on your needs) on the Arduino board and then use the host computer exclusively to interact with the Arduino board. StandardFirmata is located in the Arduino IDE in File -> Examples -> Firmata.
 
-##Firmata Client Libraries
-Most of the time you will be interacting with Arduino with a client library on the host computers. Several Firmata client libraries have been implemented in a variety of popular programming languages:
-
-* processing
-  * [https://github.com/firmata/processing]
-  * [http://funnel.cc]
-* python
-  * [https://github.com/MrYsLab/pymata-aio]
-  * [https://github.com/MrYsLab/PyMata]
-  * [https://github.com/tino/pyFirmata]
-  * [https://github.com/lupeke/python-firmata]
-  * [https://github.com/firmata/pyduino]
-* perl
-  * [https://github.com/ntruchsess/perl-firmata]
-  * [https://github.com/rcaputo/rx-firmata]
-* ruby
-  * [https://github.com/hardbap/firmata]
-  * [https://github.com/PlasticLizard/rufinol]
-  * [http://funnel.cc]
-* clojure
-  * [https://github.com/nakkaya/clodiuno]
-  * [https://github.com/peterschwarz/clj-firmata]
-* javascript
-  * [https://github.com/jgautier/firmata]
-  * [https://github.com/rwldrn/johnny-five]
-  * [http://breakoutjs.com]
-* java
-  * [https://github.com/kurbatov/firmata4j]
-  * [https://github.com/4ntoine/Firmata]
-  * [https://github.com/reapzor/FiloFirmata]
-* .NET
-  * [https://github.com/SolidSoils/Arduino]
-  * [http://www.imagitronics.org/projects/firmatanet/]
-* Flash/AS3
-  * [http://funnel.cc]
-  * [http://code.google.com/p/as3glue/]
-* PHP
-  * [https://bitbucket.org/ThomasWeinert/carica-firmata]
-  * [https://github.com/oasynnoum/phpmake_firmata]
-* Haskell
-  * [http://hackage.haskell.org/package/hArduino]
-* iOS
-  * [https://github.com/jacobrosenthal/iosfirmata]
-* Dart
-  * [https://github.com/nfrancois/firmata]
-* Max/MSP
-  * [http://www.maxuino.org/]
-* Elixir
-  * [https://github.com/kfatehi/firmata]
-* Modelica
-  * [https://www.wolfram.com/system-modeler/libraries/model-plug/]
-* golang
-  * [https://github.com/kraman/go-firmata]
-
+## [冷衫芝客户端](客户端)
 Note: The above libraries may support various versions of the Firmata protocol and therefore may not support all features of the latest Firmata spec nor all Arduino and Arduino-compatible boards. Refer to the respective projects for details.
+
 
 ##Updating Firmata in the Arduino IDE - Arduino 1.6.4 and higher
 
@@ -86,11 +48,7 @@ $ git clone git@github.com:firmata/arduino.git ~/Documents/Arduino/libraries/Fir
 *Update path above if you're using Windows or Linux or changed the default Arduino directory on OS X*
 
 
-##Updating Firmata in the Arduino IDE - older versions (<= 1.6.3 or 1.0.x)
-
-Download the latest [release](https://github.com/firmata/arduino/releases/tag/2.5.2) (for Arduino 1.0.x or Arduino 1.5.6 or higher) and replace the existing Firmata folder in your Arduino application. See the instructions below for your platform.
-
-*Note that Arduino 1.5.0 - 1.5.5 are not supported. Please use Arduino 1.5.6 or higher (or Arduino 1.0.5 or 1.0.6).*
+##Updating Firmata in the Arduino IDE - older versions (<= 1.6.3 or 1.0.x)   不再支持 
 
 ###Mac OSX:
 
