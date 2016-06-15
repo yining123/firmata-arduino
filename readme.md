@@ -5,13 +5,7 @@
 
 ## 两种使用方式
 
-###　第一种是把 冷衫之眼 运行在Arduino设备上, 
-  
-  * 数字量使用  ``` Firmata.sendAnalog(analogPin, analogRead(analogPin)) ``` 
-  * 发送字符串  ``` Firmata.sendString(stringToSend) ```. 
-  * 在Arduino中: See File -> Examples -> Firmata -> AnalogFirmata 或者 EchoString dier
-  
-### 第二种是 在 Arduino上的协议实现,然后通过串口、蓝牙、wifi、网口和上位机进行通信. File -> Examples -> Firmata
+### 一: 在Arduino实现协议,上位机通过串口、蓝牙、wifi、网口通信.(推荐)
   
    * StandardFirmata 标准实现
    * StandardFirmataPlus ICBrickCore的标准实现
@@ -19,8 +13,16 @@
    * StandardFirmataBLE 蓝牙4.0
 
 
+###　二: 协议运行在Arduino设备上.仅仅是验证协议本身
+  
+  * 数字量使用  ``` Firmata.sendAnalog(analogPin, analogRead(analogPin)) ``` 
+  * 发送字符串  ``` Firmata.sendString(stringToSend) ```. 
+  * 在Arduino中: See File -> Examples -> Firmata -> AnalogFirmata 或者 EchoString dier
+  
 
-## 使用Arduino1.6.9 --在线安装
+
+
+## 使用Arduino1.6.9 --在线安装,需要联网
 
 1. Open the Arduino IDE and navigate to: `Sketch > Include Library > Manage Libraries`
 2. Filter by "Firmata" and click on the "Firmata by Firmata Developers" item in the list of results.
