@@ -5,35 +5,32 @@
 
 ## 两种使用方式
 
-  ####　一种是把 冷衫之眼 运行在Arduino设备上, 
+###　第一种是把 冷衫之眼 运行在Arduino设备上, 
   
   * 数字量使用  ``` Firmata.sendAnalog(analogPin, analogRead(analogPin)) ``` 
   * 发送字符串  ``` Firmata.sendString(stringToSend) ```. 
   * 在Arduino中: See File -> Examples -> Firmata -> AnalogFirmata 或者 EchoString dier
   
-  #### 第二种是 在 Arduino上的协议实现,然后通过串口、蓝牙、wifi、网口和上位机进行通信. File -> Examples -> Firmata
+### 第二种是 在 Arduino上的协议实现,然后通过串口、蓝牙、wifi、网口和上位机进行通信. File -> Examples -> Firmata
   
    * StandardFirmata 标准实现
    * StandardFirmataPlus ICBrickCore的标准实现
    * StandardFirmataEthernet (以太网)
    * StandardFirmataBLE 蓝牙4.0
 
-## 其他
-
- * 聊天室 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/firmata/arduino?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
- * [冷衫芝客户端](客户端.md)
 
 
-
-## 更新 使用 1.6.9 
+## 使用Arduino1.6.9 --在线安装
 
 1. Open the Arduino IDE and navigate to: `Sketch > Include Library > Manage Libraries`
 2. Filter by "Firmata" and click on the "Firmata by Firmata Developers" item in the list of results.
 3. Click the `Select version` dropdown and select the most recent version (note you can also install previous versions)
 4. Click `Install`.
- 5. 打开 StandardFirmataPlus ,烧录
+5. 打开 StandardFirmataPlus,上传
 
-### 复制最新的库(不推荐)
+
+
+### 复制库的安装方式(不推荐)
 
 If you are contributing to Firmata or otherwise need a version newer than the latest tagged release, you can clone Firmata directly to your Arduino/libraries/ directory (where 3rd party libraries are installed). This only works for Arduino 1.6.4 and higher, for older versions you need to clone into the Arduino application directory (see section below titled "Using the Source code rather than release archive"). Be sure to change the name to Firmata as follows:
 
@@ -43,6 +40,11 @@ $ git clone git@github.com:firmata/arduino.git ~/Documents/Arduino/libraries/Fir
 
 *Update path above if you're using Windows or Linux or changed the default Arduino directory on OS X*
 
+## 其他
+
+ * 聊天室 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/firmata/arduino?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+ * [冷衫芝客户端](客户端.md)
+ * 
 
 ##Updating Firmata in the Arduino IDE - older versions (<= 1.6.3 or 1.0.x)   不再支持 
 
