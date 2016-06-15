@@ -16,7 +16,7 @@
    * StandardFirmata 标准实现
    * StandardFirmataPlus ICBrickCore的标准实现
    * StandardFirmataEthernet (以太网)
-   * 
+   * StandardFirmataBLE 蓝牙4.0
 
 ## 其他
 
