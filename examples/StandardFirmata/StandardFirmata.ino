@@ -21,6 +21,11 @@
   See file LICENSE.txt for further informations on licensing terms.
 
   Last updated by Jeff Hoefs: January 10th, 2016
+
+  //在 Uno板上
+项目使用了 13,188 字节，占用了 (40%) 程序存储空间。最大为 32,256 字节。
+全局变量使用了1,111字节，(54%)的动态内存，余留937字节局部变量。最大为2,048字节。
+
 */
 
 #include <Servo.h>
@@ -38,6 +43,8 @@
 #define I2C_RESTART_TX              0
 #define I2C_MAX_QUERIES             8
 #define I2C_REGISTER_NOT_SPECIFIED  -1
+
+#define DEFAULT_PWM_RESOLUTION     0   //TODO: 增加的数是否是0
 
 // the minimum interval for sampling analog input
 #define MINIMUM_SAMPLING_INTERVAL   1
