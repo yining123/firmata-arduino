@@ -5,39 +5,35 @@
 
 ## 两种使用方式
 
-  ##　一种是把 冷衫之眼 运行在Arduino设备上, 
+  ####　一种是把 冷衫之眼 运行在Arduino设备上, 
   
   * 数字量使用  ``` Firmata.sendAnalog(analogPin, analogRead(analogPin)) ``` 
   * 发送字符串  ``` Firmata.sendString(stringToSend) ```. 
   * 在Arduino中: See File -> Examples -> Firmata -> AnalogFirmata 或者 EchoString dier
   
-  ## 第二种是 在 Arduino上的协议实现,然后实现和计算机的通信. 
+  #### 第二种是 在 Arduino上的协议实现,然后通过串口、蓝牙、wifi、网口和上位机进行通信. File -> Examples -> Firmata
   
    * StandardFirmata 标准实现
-   * StandardFirmataPlus
+   * StandardFirmataPlus ICBrickCore的标准实现
    * StandardFirmataEthernet (以太网)
    * 
 
-## 聊天地点
- [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/firmata/arduino?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+## 其他
+
+ * 聊天室 [![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/firmata/arduino?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+ * [冷衫芝客户端](客户端.md)
 
 
-The second and more common model is to load a general purpose sketch called StandardFirmata (or one of the variants such as StandardFirmataPlus or StandardFirmataEthernet depending on your needs) on the Arduino board and then use the host computer exclusively to interact with the Arduino board. StandardFirmata is located in the Arduino IDE in File -> Examples -> Firmata.
 
-## [冷衫芝客户端](客户端)
-Note: The above libraries may support various versions of the Firmata protocol and therefore may not support all features of the latest Firmata spec nor all Arduino and Arduino-compatible boards. Refer to the respective projects for details.
-
-
-##Updating Firmata in the Arduino IDE - Arduino 1.6.4 and higher
-
-If you want to update to the latest stable version:
+## 更新 使用 1.6.9 
 
 1. Open the Arduino IDE and navigate to: `Sketch > Include Library > Manage Libraries`
 2. Filter by "Firmata" and click on the "Firmata by Firmata Developers" item in the list of results.
 3. Click the `Select version` dropdown and select the most recent version (note you can also install previous versions)
 4. Click `Install`.
+ 5. 打开 StandardFirmataPlus ,烧录
 
-###Cloning Firmata
+### 复制最新的库(不推荐)
 
 If you are contributing to Firmata or otherwise need a version newer than the latest tagged release, you can clone Firmata directly to your Arduino/libraries/ directory (where 3rd party libraries are installed). This only works for Arduino 1.6.4 and higher, for older versions you need to clone into the Arduino application directory (see section below titled "Using the Source code rather than release archive"). Be sure to change the name to Firmata as follows:
 
